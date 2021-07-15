@@ -1,0 +1,40 @@
+.filter
+    width: fit-content
+    position: relative
+    &:hover
+        cursor: pointer
+        .filter_content 
+            height: fit-content
+    & > span 
+        color: #51A8E7
+        position: relative
+        display: inline
+        &::after 
+            content: '...'
+            color: #51A8E7
+            position: absolute
+            bottom: -2px
+            left: 3px
+            font-size: 38px
+            letter-spacing: -3px
+    &_content 
+        min-width: 240px
+        position: absolute
+        height: 0
+        top: 110%
+        left: 46
+        z-index: 99
+        transition: 0.2s
+        padding-top: 12px
+        margin-top: -10px
+        overflow: hidden
+        &::before 
+            content: ''
+            position: relative
+            display: block
+            width: 16px
+            height: 12px
+            background-color: #51A8E7
+            clip-path: polygon(50% 0, 100% 100%, 100% 100%, 0% 100%)
+            margin-left: 7px
+
